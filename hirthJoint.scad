@@ -51,7 +51,7 @@ module singleSnap(snaps, h, ct, d, res, gpt) {
 
 	translate([d/2,0,0]) {
 		rotate([0,-90,0]) {
-			linear_extrude(height = d/2,center = false, twist = 0, scale = [1,0], slices = res) {
+			linear_extrude(height = d/2,center = false, twist = 0, scale = [1,1e-308], slices = res) {
 				polygon(
 					points=[[aH, 0],[0, aSide],[0, -aSide]],
 					paths=[[0,1,2]]
